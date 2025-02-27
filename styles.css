@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 .light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -114,6 +114,7 @@ button:hover {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 .graduated {
