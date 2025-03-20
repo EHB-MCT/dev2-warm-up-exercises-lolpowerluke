@@ -8,6 +8,7 @@ runTitle();
 warmup1();
 warmup2();
 warmup3();
+warmup4();
 
 function warmup1() {
   let i = 0;
@@ -101,7 +102,18 @@ function warmup3() {
 }
 
 function warmup4() {
-    let main, min, max;
+  let main, min, max;
+  document.getElementById("button-4a").addEventListener("click", async () => {
+    const data = await fetch('http://api.openweathermap.org/data/2.5/weather?q=Brussels&APPID=d7b955c4c268fe54649d6f0d702b39d1&units=metric')
+    const myData = await data.json();
+    console.log(myData);
+    main = myData.main.temp;
+    min = myData.main.temp_min;
+    max = myData.main.temp_max;
+  });
+  document.getElementById("button-4b").addEventListener("click", async () => {
+    document.getElementById("content-4").innerHTML = `<h2>Temp: ${main} *</h2><h2>Min temp: ${min} *</h2><h2>Max temp: ${max} *</h2>`;
+  });
 }
 
 function warmup5() {
